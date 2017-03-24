@@ -1,0 +1,27 @@
+<p>{{ hello }}</p>
+<button type="button" class="btn btn-success" id = "demo" ></button>
+<button type="button" class="btn btn-success" ng-repeat="aff in end">{{ aff }}</button><div class="well">
+
+<script>
+  angular.module('dateExample', [])
+    .controller('DateController', ['$scope', function($scope) {
+      $scope.example = {
+        value: new Date(2010, 11, 28, 14, 57)
+      };
+    }]);
+</script>
+<form name="myForm" >
+  <label for="exampleInput">Pick a date between in 2013:</label>
+  <input type="datetime-local" id="exampleInput" name="input" ng-model="example.value"
+      placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+      <input type="text" data-ng-model="timeModel" data-time-picker[="h:mm a"]
+    [data-picker-type="date"]
+    [data-picker-interval="60"]
+    [data-timezone="tzModel"]/>
+  <div role="alert">
+    <span class="error" ng-show="myForm.input.$error.required">
+        Required!</span>
+    <span class="error" ng-show="myForm.input.$error.datetimelocal">
+        Not a valid date!</span>
+  </div>
+</form>

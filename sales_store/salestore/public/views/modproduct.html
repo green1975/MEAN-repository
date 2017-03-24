@@ -1,0 +1,41 @@
+<div>
+	<table class="table table-striped">
+		<thead color= "white">
+			<tr>
+				<th>Date</th>
+				<th>Name of product</th>
+				<th>Description</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="prod in prods">
+				<td>{{ prod.date | date: 'MM/dd/yyyy' }}</td>
+				<td>{{ prod.name }}</td>
+				<td>{{ prod.description }}</td>
+				<td>{{ prod.price }}</td>
+				<td><button type="submit" ng-click="erase(prod._id)">Erase</button>
+					<button  data-toggle="modal" data-target="#myModal"type="submit" ng-click="edit(prod._id)">Edit</button></td>
+				</tr>
+			</tbody>
+
+		</table>
+		<form ng-submit = "change(prod._id)">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<input class="modal-title" id="myModalLabel" ng-value="prod.name" ng-model="nom"/>
+						</div>
+						<input class="modal-body" ng-value="prod.description" ng-model="desc"/>
+						<input class="modal-body" ng-value="prod.price" ng-model="prix"/>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>

@@ -1,0 +1,26 @@
+<form class="form-inline" ng-submit="submit()">
+  <div class="form-group">
+    <label for="exampleInputName2" >Auction</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="new auction" ng-model="price">
+  </div>
+    <button type="submit" class="btn btn-default">Send auction</button>
+</form>
+<div class="alert alert-success" role="alert" ng-if="ok == true">{{ message }}</div>
+<div class="alert alert-danger" role="alert" ng-if="bad == false">{{ error }}</div>
+<table class="table table-striped">
+<thead color= "white">
+		<tr>
+			<th>Date</th>
+			<th>Email</th>
+			<th>Auction</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="prod in list">
+			<td>{{ prod.date | date: 'MM-dd-yyyy @ hh:mm'}}</td>
+			<td>{{ prod.email }}</td>
+			<td>{{ prod.price }}</td>
+		</tr>
+	</tbody>
+
+</table>

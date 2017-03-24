@@ -1,0 +1,17 @@
+<table class="table table-striped">
+<thead color= "white">
+		<tr>
+			<th>Date</th>
+			<th>Email</th>
+			<th>Auction</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="prod in val">
+			<td>{{ prod.date | date: 'MM-dd-yyyy @ hh:mm'}}</td>
+			<td>{{ prod.email }}</td>
+			<td>{{ prod.price }}</td>
+		</tr>
+	</tbody>
+
+</table>

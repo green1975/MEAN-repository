@@ -1,0 +1,79 @@
+/* Date Picker Styles */
+
+@import "vars";
+
+.date-picker {
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    width: 172px;
+    margin-top: 2px;
+    padding: 2px 0 0 2px;
+    overflow: hidden;
+    border: 1px solid @datetime-tone3;
+    background-color: @datetime-tone5;
+    box-shadow: 0 0 3px 0 rgba( 0, 0, 0, 0.2 );
+
+    .month-name {
+        clear: left;
+        padding: 3px 0;
+        margin: 0 2px 2px 0;
+        background-color: @datetime-tone4;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .month-prev,
+    .month-next {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .month-next {
+        left: auto; right: 10px;
+    }
+
+    .filler-space,
+    .day-name-cell,
+    .date-cell {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin: 0 2px 2px 0;
+        border: 1px solid @datetime-tone5;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        cursor: default;
+    }
+
+    .day-name-cell {
+        color: @datetime-tone1;
+    }
+
+    .date-cell {
+
+        border: 1px solid @datetime-tone3; cursor: pointer;
+
+        &:hover {
+            background-color: @datetime-tone4;
+        }
+
+        &.today {
+            border: 1px solid @datetime-tone2;
+            background-color: @datetime-tone4;
+            color: @datetime-tone1;
+        }
+
+    }
+
+}

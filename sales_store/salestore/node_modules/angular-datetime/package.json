@@ -1,0 +1,118 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-datetime",
+        "scope": null,
+        "escapedName": "angular-datetime",
+        "name": "angular-datetime",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/didierpotiron/rendu/sales_store/salestore"
+    ]
+  ],
+  "_from": "angular-datetime@latest",
+  "_id": "angular-datetime@3.0.4",
+  "_inCache": true,
+  "_location": "/angular-datetime",
+  "_nodeVersion": "6.3.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/angular-datetime-3.0.4.tgz_1471023800407_0.5534473145380616"
+  },
+  "_npmUser": {
+    "name": "vokal",
+    "email": "npm@vokal.io"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-datetime",
+    "scope": null,
+    "escapedName": "angular-datetime",
+    "name": "angular-datetime",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-datetime/-/angular-datetime-3.0.4.tgz",
+  "_shasum": "7018ca39313cf509e0826bc81524bcdc448bea7b",
+  "_shrinkwrap": null,
+  "_spec": "angular-datetime",
+  "_where": "/home/didierpotiron/rendu/sales_store/salestore",
+  "authors": [
+    {
+      "name": "Vokal",
+      "email": "webdevelopers@vokal.io"
+    }
+  ],
+  "bugs": {
+    "url": "http://github.com/vokal/angular-datetime/issues"
+  },
+  "dependencies": {
+    "moment": "^2.10.6",
+    "moment-timezone": "^0.5.0"
+  },
+  "description": "Basic date/time pickers for Angular.js",
+  "devDependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify-istanbul": "^0.2.1",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-istanbul": "^0.6.1",
+    "grunt-protractor-coverage": "^0.2.15",
+    "less": "^2.5.3",
+    "protractor": "^2.5.1",
+    "protractor-axs": "^1.0.0",
+    "q": "^1.4.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "7018ca39313cf509e0826bc81524bcdc448bea7b",
+    "tarball": "https://registry.npmjs.org/angular-datetime/-/angular-datetime-3.0.4.tgz"
+  },
+  "gitHead": "1cc8c4414e0212388729c4f8d980d6fd62c60007",
+  "homepage": "http://github.com/vokal/angular-datetime",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "maintainers": [
+    {
+      "name": "dmaloneycalu",
+      "email": "dmaloney.calu@gmail.com"
+    },
+    {
+      "name": "jrit",
+      "email": "jarrett@24m2.com"
+    },
+    {
+      "name": "vokal",
+      "email": "npm@vokal.io"
+    }
+  ],
+  "name": "angular-datetime",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vokal/angular-datetime.git"
+  },
+  "scripts": {
+    "prepublish": "node scripts/compile.js",
+    "pretest": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "start": "node server",
+    "test": "grunt test"
+  },
+  "version": "3.0.4"
+}

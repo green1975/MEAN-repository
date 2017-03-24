@@ -1,0 +1,40 @@
+
+
+	<div>
+		<table class="table table-striped">
+			<thead color= "white">
+				<tr>
+					<th>Date inscription</th>
+					<th>Name of user</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in list">
+					<td>{{ user.date | date: 'MM/dd/yyyy'}}</td>
+					<td>{{ user.username }}</td>
+					<td>{{ user.email }}</td>
+					<td><button type="submit" ng-click= "supp(user.email)">Erase</button>
+						<button data-toggle="modal" data-target="#myModale"type="submit" type="submit" ng-click="fich(user.email)">Edit</button></td>
+					</tr>
+				</tbody>
+
+			</table>
+			<form ng-submit = "mod(user.email)">
+				<div class="modal fade" id="myModale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<input class="modal-title" id="myModalLabel" ng-value="res.username" ng-model="user"/>
+							</div>
+							<input class="modal-body" ng-value="res.email" ng-model="mail"/>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>

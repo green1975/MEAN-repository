@@ -1,0 +1,28 @@
+<div class="container-fluid" ng-controller="indexcontroller">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-3" ng-repeat="card in cards">
+      <div class="productbox" >
+        <img src="ftp://didierpot2000@wanadoo.fr@perso-ftp.orange.fr/uploads/fonds-ecran-paysage-magnifique-10-660x330.jpg" class="img-responsive">
+        <div class="producttitle"><h3>{{ card.name }}</h3></div>
+        <div class="producttitle">Description:</div>
+        <p class="text-justify">{{ card.description }}</p>
+        <address>
+          <strong>Last Auction</strong><br>
+          <a href="mailto:#">{{ card.email }}</a>
+        </address>
+        <strong>End of Auction</strong><br>
+        <a href="mailto:#">{{ card.end }}</a><br><br>
+        <strong>Initial Price</strong><br>
+        <a href="mailto:#">{{ card.price }}€</a>
+        <div class="productprice">
+          <div class="pull-right">
+            <a href="#" class="btn btn-success btm-sm" role="button">{{ card.auction }}€<span></span></a>
+          </div>
+          <div class="pricetext">
+            <a href="auction" class="btn btn-warning btm-sm" role="button" ng-click="auction(card.id)">Auction<span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

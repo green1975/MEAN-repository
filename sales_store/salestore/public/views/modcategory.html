@@ -1,0 +1,22 @@
+<form class="form-inline" ng-submit="add()">
+	<div class="form-group">
+		<input type="text" class="form-control"  placeholder="Category" ng-model="cate">
+	</div>
+	<button type="submit" class="btn btn-default" >Add category</button>
+</form>
+<form ng-submit="subcat()">
+	<div class="dropdown" ng-controller="indexcontroller">
+		<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Categories
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dLabel" >
+			<li ng-repeat="aff in affichage"><a ng-click="choice(aff.name)" >{{ aff.name }}</a></li>
+		</ul>
+	</div>
+	<p>{{ name }}</p>
+	<div class="form-group">
+		<input type="text" class="form-control" id="exampleInputSubcat" placeholder="subcategory" ng-model="sub">
+		<button type="submit" class="btn btn-default">Add subcategory</button>
+	</div>
+</form>

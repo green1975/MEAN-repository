@@ -1,0 +1,65 @@
+<form ng-submit="send()">
+  <div class="form-group">
+    <label for="exampleInputName1">Name:</label>
+    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" ng-model="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDescription">Description</label>
+    <input type="textarea" class="form-control" id="exampleInputDescription1" placeholder="Description" ng-model="description">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPrice">Price</label>
+    <input type="text" class="form-control" id="exampleInputPrice1" placeholder="Price" ng-model="price">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPrice">EndDateAuction</label>
+    <input ng-model="date3" datetime-picker date-format="yyyy-MM-dd HH:mm:ss" />
+  </div>
+  <div ng-controller="indexcontroller">
+    <div class="dropdown" >
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Categories
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" >
+        <li ng-repeat="cat in affichage" ng-click="scat(cat.name)"><a href="#">{{ cat.name }}</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        SubCategories
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" >
+        <li ng-repeat="affi in sbcat.subcat" ng-click="sbbcat(affi)"><a href="#">{{ affi }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<form name="myForm">
+  <fieldset>
+    <legend>Upload Photos</legend>
+    Username:
+    <input type="text" name="userName" ng-model="username" size="31" required>
+    <i ng-show="myForm.userName.$error.required">*required</i>
+    <br>Photo:
+    <input type="file" ngf-select ng-model="picFile" name="file"    
+    accept="image/*" ngf-max-size="2MB" required
+    ngf-model-invalid="errorFile" ngf-resize="{width: 100, height: 100}">
+    <i ng-show="myForm.file.$error.required">*required</i><br>
+    <i ng-show="myForm.file.$error.maxSize">File too large 
+      {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+      <button ng-disabled="!myForm.$valid" 
+      ng-click="uploadPic(picFile)">Submit</button>
+      <span class="progress" ng-show="picFile.progress >= 0">
+        <div style="width:{{picFile.progress}}%" 
+        ng-bind="picFile.progress + '%'"></div>
+      </span>
+      <span ng-show="picFile.result">Upload Successful</span>
+      <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+    </fieldset>
+    <br>
+  </form>
