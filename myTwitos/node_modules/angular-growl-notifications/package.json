@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-growl-notifications",
+        "scope": null,
+        "escapedName": "angular-growl-notifications",
+        "name": "angular-growl-notifications",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/didierpotiron/rendu/MEAN_RollerCoaster/myTwitos"
+    ]
+  ],
+  "_from": "angular-growl-notifications@latest",
+  "_id": "angular-growl-notifications@2.5.0",
+  "_inCache": true,
+  "_location": "/angular-growl-notifications",
+  "_nodeVersion": "4.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/angular-growl-notifications-2.5.0.tgz_1482483484307_0.3490524832159281"
+  },
+  "_npmUser": {
+    "name": "jvandemo",
+    "email": "jurgen.van.de.moere@gmail.com"
+  },
+  "_npmVersion": "2.14.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-growl-notifications",
+    "scope": null,
+    "escapedName": "angular-growl-notifications",
+    "name": "angular-growl-notifications",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-growl-notifications/-/angular-growl-notifications-2.5.0.tgz",
+  "_shasum": "2f2897b7fb936df686a246d77292df447c6ada9f",
+  "_shrinkwrap": null,
+  "_spec": "angular-growl-notifications",
+  "_where": "/home/didierpotiron/rendu/MEAN_RollerCoaster/myTwitos",
+  "author": {
+    "name": "Jurgen Van de Moere",
+    "email": "jurgen.van.de.moere@gmail.com",
+    "url": "http://www.jvandemo.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jvandemo/angular-growl-notifications/issues"
+  },
+  "dependencies": {
+    "angular": ">=1.2.22 <2"
+  },
+  "description": "![AngularJS Growl Notifications](http://i.imgur.com/F4ttQxo.png)",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-karma": "~0.8.0",
+    "karma": "~0.12.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-mocha": "^0.1.7",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "load-grunt-tasks": "^0.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "2f2897b7fb936df686a246d77292df447c6ada9f",
+    "tarball": "https://registry.npmjs.org/angular-growl-notifications/-/angular-growl-notifications-2.5.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "gitHead": "18c306fd5f4bdb64a28497a021b301dff8c9f119",
+  "homepage": "https://github.com/jvandemo/angular-growl-notifications#readme",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "growl",
+    "notification",
+    "notifications"
+  ],
+  "main": "./dist/angular-growl-notifications.js",
+  "maintainers": [
+    {
+      "name": "jvandemo",
+      "email": "jurgen.van.de.moere@gmail.com"
+    }
+  ],
+  "name": "angular-growl-notifications",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jvandemo/angular-growl-notifications.git"
+  },
+  "scripts": {},
+  "version": "2.5.0"
+}

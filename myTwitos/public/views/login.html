@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<div>
+	<form ng-controller = "loginController" ng-submit="submit()">
+		<p>Email: <input type="email" ng-model = "email" placeholder="your email"/></p>
+		<p>Password: <input type="password" ng-model = "password" placeholder="your password"/></p>
+		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			<i class="material-icons right">send</i>
+		</button>
+		<p>{{ erreur.message }}</p>
+</form>
+
+
+</div>

@@ -1,0 +1,105 @@
+
+<ul id="slide-out" class="side-nav fixed">
+<li><div class="userView">
+  <div class="background">
+    <img src="images/automne.jpg">
+  </div>
+  <a href="#!user"><img class="circle" src="images/Adriana.png"></a>
+  <a href="#!name"><span class="white-text name">{{ name }}</span></a>
+  <a href="#!email"><span class="white-text email">{{ email }}</span></a>
+</div></li>
+<li><div class="divider"></div></li>
+<li><a class="subheader">Request </a></li>
+  <li>
+  <div class="collection" ng-repeat="view in ask track by $index">
+    <a class="collection-item" href="chat?ask={{ user.email }}">{{ view }}<span class=" badge green" ng-click="yes()" >Yes</span><span class=" badge red" ng-click="no()">No</span></a>
+  </div>
+  </li>
+  <li><a class="subheader">Friends</a></li>
+  <li>
+  <div class="collection" ng-repeat="vue in friend track by $index">
+    <a class="collection-item">{{ vue.amis }}</a>
+  </div>
+  </li>
+</ul>
+<!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
+<script type="text/javascript"> 
+$(".button-collapse").sideNav();
+</script>
+
+</div>
+<div>
+<form  ng-submit = "submit()">
+  <div class="row">
+   <div class="input-field col s6">
+    <i class="material-icons prefix" >mode_edit</i>
+    <textarea id="icon_prefix2" class="materialize-textarea" ng-model="message"></textarea>
+    <label for="icon_prefix2">Message</label>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+</div>
+</form>
+</div>
+
+<ul class="collection" ng-repeat="post in billets">
+<li class="collection-item avatar">
+ <img src="images/Adriana.png" alt="" class="circle">
+ <span class="title"><font color="#F7404D">{{ post.name }}</font> {{ post.date | date:'MM/dd/yyyy @ HH:mm' }}</span>
+ <p ng-model="message">{{ post.message }}</p>
+ <a href="login" class="secondary-content"  ng-click="increment(post);"><i class="material-icons" >thumb_up</i></a>
+</li>
+<li>
+<a class="waves-effect waves-light btn" ng-click="addId(post._id)" href="#modal1">Comments ({{ post.__v }})</a>
+</li>
+</ul>
+<div id="modal1" class="modal" style="background-color:#376D96;">
+<div class="modal-content">
+  <h4>Modal Header</h4>
+  <form class="col s12"  ng-submit = "sendcomment()">
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix" >mode_edit</i>
+        <textarea id="icon_prefix2" class="materialize-textarea" ng-model="commentaire"></textarea>
+        <label for="icon_prefix2" >Commentaires</label>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <ul  ng-repeat="send in comments">
+          <li >
+
+              <div  class="card-panel grey lighten-5 z-depth-1" >
+                <div class="row valign-wrapper" >
+                  <div class="col s2">
+                    <img src="images/Adriana.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10" >
+                    <span class="black-text" style="background-color:#ECDCAC;">
+            <span ><font color="#F7404D">{{ send.name }}</font> {{ send.date | date:'MM/dd/yyyy @ HH:mm' }}</span>
+
+                    <p>{{ send.commentaire }}</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            <!-- <span ><font color="#F7404D">{{ send.name }}</font> {{ send.date | date:'MM/dd/yyyy @ HH:mm' }}</span>
+            <p >{{ send.commentaire }}</p> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+});
+
+</script>

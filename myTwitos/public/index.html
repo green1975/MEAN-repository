@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>My ChAt</title>
+	<base href="/">
+</head>
+<body ng-app = "myApp" style="background-color:#DDCBC6;">
+	<div class="navbar-fixed">
+		<nav class="teal">
+			<div class="nav-wrapper">
+				<a class="brand-logo">Welcome</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down" ng-if="session == null">
+	<li><img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login()"/></li>
+					<li><a href="newuser">REGISTER</a></li>
+					<li><a href="login">LOGIN</a></li>
+					<!-- <li><a href="logout">LOGOUT</a></li> -->
+				</ul>
+				<ul id="nav-mobile" class="right hide-on-med-and-down" ng-if="session != null">
+
+					<li>
+						<form  ng-controller="searchController"  ng-submit="submit()" class="input-field">
+							<input class="teal" id="search" ng-model ="research" type="search" required>
+							<label class="label-icon" for="search" type="submit()"><i class="material-icons">search</i></label>
+							<i class="material-icons">close</i>
+						</form>
+					</li>
+					<li><a > You logged as {{ connect }}</a></li>
+					<li><a href="listuser">HOME</a></li>
+					<li><a href="chat">MY CHAT</a></li>
+					<!-- <li><a href="login">LOGIN</a></li> -->
+					<li><a href="logout">LOGOUT</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<div class="container">
+		<ui-view></ui-view>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+	<script src = "angular/angular.js" type="text/javascript"></script>
+	<script type="text/javascript" src="angular-growl-notifications.js"></script>
+	<script src = "angular-route/angular-route.min.js" type="text/javascript"></script>
+	<script src="angular-ui-router/release/angular-ui-router.min.js"></script> 
+	<script type="text/javascript" js.src = "//connect.facebook.net/en_US/sdk.js"></script>
+	<script src="moment/min/moment.min.js"></script>
+	<script src = "controllers.js" ></script>
+	<script src = "routes.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.carousel').carousel();
+		});
+		
+	</script>
+	<script type="text/javascript">
+		$window.fbAsyncInit = function() {
+    FB.init({ 
+      appId: '{your-app-id}',
+      status: true, 
+      cookie: true, 
+      xfbml: true,
+      version: 'v2.4'
+    });
+};
+	</script>
+	
+
+</body>
+</html>

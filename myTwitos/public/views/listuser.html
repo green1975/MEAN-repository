@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<table class="highlight">
+	<thead>
+		<tr>
+			<th data-field="firstname">FirstName</th>
+			<th data-field="lastname">LastName</th>
+			<th data-field="email">Email</th>
+			<th data-field="codepostale">Code Postale</th>         	
+		</tr>
+	</thead>
+
+	<tbody>
+	<tr ng-repeat = "user in file">
+			<td>{{ user.firstname }}</td>
+			<td>{{ user.lastname }}</td>
+			<td>{{ user.email }}</td>
+			<td>{{ user.codepostale }}</td>
+			<td><a class="chip" href="page?email={{ user.email }}">Go Friend</a></td>
+		</tr>
+
+	</tbody>
+</table>
+
