@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<div>
+
+
+	<form ng-controller = "userController" ng-submit = "submit()">
+		<p>Name: <input type="text" ng-model = "username" placeholder="your name"/></p>
+		<p>Email: <input type="email" ng-model = "email" placeholder="your email"/></p>
+		<p>Password: <input type="text" ng-model = "password" placeholder="your password"/></p>
+		<p>Repeat password: <input type="text" ng-model="rptpass" placeholder="repeat yourpassword"/></p>
+		<button type="submit" >Send</button>
+		<p>{{ reussite }}</p>
+	<p>{{ verify }}</p>
+	<p>{{ erreur }}</p>
+	</form>
+
+</div>
